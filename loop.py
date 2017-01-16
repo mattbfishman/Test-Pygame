@@ -1,70 +1,70 @@
 from pygame import *
 from Player import Player
-import sys, pygame, spritesheet
+from Wall import Wall
+import sys, pygame, spritesheet, glob
 from SpriteStripAnim import SpriteStripAnim
+
 
 pygame.init()
 size = width, height = 640, 480
 screen = pygame.display.set_mode(size)
+clock = pygame.time.Clock()
 
-# def anTest():
-# 	playerSS = spritesheet.spritesheet('sprites/rightwalk.png')
-# 	player = playerSS.image_at((0,0,64,64))
-# 	tempPlayer = Player(0,15)
-# 	strips = [
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((0,0,64,64)), 9, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((64,0,64,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((128,0,64,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((192,64,48,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((256,0,64,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((320,0,64,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((384,0,64,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((448,0,64,64)), 0, 1, True, frames),
-# 	    SpriteStripAnim('sprites/rightwalk.png', ((512,0,64,64)), 0, 1, True, frames),
-# 	] 
-# 	n = 0
-# 	strips[n].iter()
-# 	image = strips[n].next()
-# 	while True:
-# 	    for e in pygame.event.get():
-# 	        if e.type == KEYUP:
-# 	            if e.key == K_ESCAPE:
-# 	                sys.exit()
-# 	        keys = pygame.key.get_pressed()
-#             if keys[K_d]:
-#                 if n >= len(strips):
-#                     n = 0
-#                 image = strips[n].next()
-#                 tempPlayer.x +=2
-#             else: 
-#             	image = player
-# 	    screen.blit(image, (tempPlayer.x,tempPlayer.y))
-# 	    pygame.display.flip()
-# 	    # clock.tick(FPS)
-
+rightwalk = glob.glob("sprites/rightwalk*.png")
+upwalk = glob.glob("sprites/upwalk*.png")
+leftwalk = glob.glob("sprites/leftwalk*.png")
+downwalk = glob.glob("sprites/downwalk*.png")
 
 def mainGame():
 	backgroundSS = spritesheet.spritesheet('map.png')
 	background = backgroundSS.image_at((0,0,640,480))
 
-	player = Player(0,15)
-	playerRight = []
-	playerSS = spritesheet.spritesheet('sprites/downwalk.png')
+	all_sprites = pygame.sprite.Group()
+	walls = pygame.sprite.Group()
+	players = pygame.sprite.Group()
 
-	defaultPlayer = playerSS.image_at((0,0,64,64), colorkey=(0,0,0))
-	tempPlayer = Player(0,15)
-	right = player.rightSprite()
-	left = player.leftSprite()
-	up = player.upSprite()
-	down = player.downSprite()
+	wall_1 = Wall('sprites/wall.png',0,0)
+	walls.add(wall_1)
+
+	player = Player('sprites/player.png', 30, 30, 64, 64)
+	players.add(player)
+	all_sprites.add(players,wall_1)
+	
 	n = 0
+	time = 0
 	while 1:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT: sys.exit()
 
-		playerImage = player.playerMove(player, n, right, left, up, down, defaultPlayer)
+		collide_list_1 = pygame.sprite.spritecollideany(wall_1,players)
+
+		keys = pygame.key.get_pressed()
+		time += 1
+		if time % 5 == 0:
+			if keys[K_w]:
+				if collide_list_1 == None:
+					player.image = pygame.image.load(upwalk[n]).convert_alpha()
+					n = (n + 1) % len(leftwalk)
+					player.rect.y -=10
+			elif keys[K_s]:
+					player.image = pygame.image.load(downwalk[n]).convert_alpha()
+					n = (n + 1) % len(leftwalk)
+					player.rect.y +=10
+			elif keys[K_a]:
+				player.image = pygame.image.load(leftwalk[n]).convert_alpha()
+				player.rect.x -=10
+				n = (n + 1) % len(leftwalk)
+			elif keys[K_d]:
+				player.image = pygame.image.load(rightwalk[n]).convert_alpha()
+				player.rect.x +=10
+				n = (n + 1) % len(rightwalk)
+			else:
+				n = 0 
+				player.image = pygame.image.load('sprites/player.png').convert_alpha()
+
 		screen.blit(background,(0,0))
-		screen.blit(playerImage,(player.x, player.y))
+		all_sprites.draw(screen)
+		all_sprites.update()
 		pygame.display.flip()
 
 
@@ -93,66 +93,6 @@ def startScreen():
 		if keys[K_SPACE]:
 			start = True
 			mainGame()
-
-    
-
-# def movePlayer(imageNumber):
-# 	keys = pygame.key.get_pressed()
-# 	if keys[K_LEFT] or keys[K_a]:
-# 	    player.x-= 3
-# 	    return 1
-# 	if keys[K_RIGHT] or keys[K_d]:
-# 	    player.x+= 3
-# 	    return 3
-# 	if keys[K_UP] or keys[K_w]: 
-# 		if player.y <= 18: 
-# 			player.y-=0
-# 	   	else: player.y-=3
-# 		return 0
-# 	if keys[K_DOWN] or keys[K_s]:
-# 	    player.y+= 3
-# 	    return 2
-# 	else: return imageNumber
-
-# def pauseGame(pause):
-# 	while pause:
-# 		for event in pygame.event.get():
-# 			if event.type == pygame.QUIT: sys.exit()
-# 		menu.openMenu(screen)
-
-# while not start:
-# 	for event in pygame.event.get():
-# 		if event.type == pygame.QUIT: sys.exit()
-
-	# black=(0,0,0)
-	# screen.fill(black)
-	# screen.blit(startBackground,(0,0))
-
-	# headingFont=pygame.font.SysFont("Britannic Bold", 64)
-	# clickFont=pygame.font.SysFont("Britannic Bold", 28)
-	# headingLabel=headingFont.render("Welcome", 1, (black))
-	# clickLabel=clickFont.render("Press the spacebar to start", 1, (black))
-	# screen.blit(headingLabel,(220,50))
-	# screen.blit(clickLabel,(200,400))
-	# pygame.display.flip()
-
-	# keys = pygame.key.get_pressed()
-	# if keys[K_SPACE]:
-	# 	start = True
-
-
-    # imageNumber = movePlayer(imageNumber)
-    # keys = pygame.key.get_pressed()
-    # if keys[K_i]:
-    # 	pause = True
-    # 	pauseGame(pause)
-    # 	break
-    
-    # screen.blit(ss,(0,0))
-    # area = pygame.Rect(int(imageNumber) * 64, 0, 64, 64)
-    # pygame.draw.rect(screen, blue,(camX, player.y, 160, 120))
-
+	
 
 startScreen()
-#anTest()
-

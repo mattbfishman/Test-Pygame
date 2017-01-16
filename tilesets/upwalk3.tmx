@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="6" height="7" tilewidth="8" tileheight="8" nextobjectid="1">
+ <tileset firstgid="1" source="HEAD_plate_armor_helmet.tsx"/>
+ <tileset firstgid="2305" source="TORSO_plate_armor_arms_shoulders.tsx"/>
+ <tileset firstgid="4609" source="TORSO_plate_armor_torso.tsx"/>
+ <tileset firstgid="6913" source="LEGS_plate_armor_pants.tsx"/>
+ <tileset firstgid="9217" source="FEET_plate_armor_shoes.tsx"/>
+ <tileset firstgid="11521" source="HANDS_plate_armor_gloves.tsx"/>
+ <layer name="Tile Layer 1" width="6" height="7">
+  <data encoding="csv">
+90,91,92,93,94,95,
+162,163,164,165,166,167,
+234,235,236,237,238,239,
+306,307,308,309,310,311,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+2466,2467,2468,2469,2470,2471,
+2538,2539,2540,2541,2542,2543,
+2610,2611,2612,2613,2614,2615,
+2682,2683,2684,2685,2686,2687,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 3" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+4842,4843,4844,4845,4846,4847,
+4914,4915,4916,4917,4918,4919,
+4986,4987,4988,4989,4990,4991,
+5058,5059,5060,5061,5062,5063,
+5130,5131,5132,5133,5134,5135
+</data>
+ </layer>
+ <layer name="Tile Layer 4" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+7218,7219,7220,7221,7222,7223,
+7290,7291,7292,7293,7294,7295,
+7362,7363,7364,7365,7366,7367,
+7434,7435,7436,7437,7438,7439
+</data>
+ </layer>
+ <layer name="Tile Layer 5" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+9522,9523,9524,9525,9526,9527,
+9594,9595,9596,9597,9598,9599,
+9666,9667,9668,9669,9670,9671,
+9738,9739,9740,9741,9742,9743
+</data>
+ </layer>
+ <layer name="Tile Layer 6" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+11754,11755,11756,11757,11758,11759,
+11826,11827,11828,11829,11830,11831,
+11898,11899,11900,11901,11902,11903,
+11970,11971,11972,11973,11974,11975,
+12042,12043,12044,12045,12046,12047
+</data>
+ </layer>
+</map>

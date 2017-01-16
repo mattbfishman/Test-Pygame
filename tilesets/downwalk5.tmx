@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="6" height="7" tilewidth="8" tileheight="8" nextobjectid="1">
+ <tileset firstgid="1" source="HANDS_plate_armor_gloves.tsx"/>
+ <tileset firstgid="2305" source="HEAD_plate_armor_helmet.tsx"/>
+ <tileset firstgid="4609" source="TORSO_plate_armor_arms_shoulders.tsx"/>
+ <tileset firstgid="6913" source="TORSO_plate_armor_torso.tsx"/>
+ <tileset firstgid="9217" source="LEGS_plate_armor_pants.tsx"/>
+ <tileset firstgid="11521" source="FEET_plate_armor_shoes.tsx"/>
+ <layer name="Tile Layer 1" width="6" height="7">
+  <data encoding="csv">
+3562,3563,3564,3565,3566,3567,
+3634,3635,3636,3637,3638,3639,
+3706,3707,3708,3709,3710,3711,
+3778,3779,3780,3781,3782,3783,
+3850,3851,3852,3853,3854,3855,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+6010,6011,6012,6013,6014,6015,
+6082,6083,6084,6085,6086,6087,
+6154,6155,6156,6157,6158,6159,
+6226,6227,6228,6229,6230,6231,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 3" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+8314,8315,8316,8317,8318,8319,
+8386,8387,8388,8389,8390,8391,
+8458,8459,8460,8461,8462,8463,
+8530,8531,8532,8533,8534,8535,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 4" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+10690,10691,10692,10693,10694,10695,
+10762,10763,10764,10765,10766,10767,
+10834,10835,10836,10837,10838,10839,
+10906,10907,10908,10909,10910,10911
+</data>
+ </layer>
+ <layer name="Tile Layer 5" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+13066,13067,13068,13069,13070,13071,
+13138,13139,13140,13141,13142,13143,
+13210,13211,13212,13213,13214,13215
+</data>
+ </layer>
+ <layer name="Tile Layer 6" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+1474,1475,1476,1477,1478,1479,
+1546,1547,1548,1549,1550,1551,
+1618,1619,1620,1621,1622,1623,
+1690,1691,1692,1693,1694,1695
+</data>
+ </layer>
+</map>

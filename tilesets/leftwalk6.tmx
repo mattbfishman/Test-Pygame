@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="6" height="7" tilewidth="8" tileheight="8" nextobjectid="1">
+ <tileset firstgid="1" source="HEAD_plate_armor_helmet.tsx"/>
+ <tileset firstgid="2305" source="TORSO_plate_armor_torso.tsx"/>
+ <tileset firstgid="4609" source="LEGS_plate_armor_pants.tsx"/>
+ <tileset firstgid="6913" source="FEET_plate_armor_shoes.tsx"/>
+ <tileset firstgid="9217" source="HANDS_plate_armor_gloves.tsx"/>
+ <tileset firstgid="11521" source="TORSO_plate_armor_arms_shoulders.tsx"/>
+ <layer name="Tile Layer 1" width="6" height="7">
+  <data encoding="csv">
+690,691,692,693,694,695,
+762,763,764,765,766,767,
+834,835,836,837,838,839,
+906,907,908,909,910,911,
+978,979,980,981,982,983,
+1050,1051,1052,1053,1054,1055,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+3138,3139,3140,3141,3142,3143,
+3210,3211,3212,3213,3214,3215,
+3282,3283,3284,3285,3286,3287,
+3354,3355,3356,3357,3358,3359,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 3" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+12354,12355,12356,12357,12358,12359,
+12426,12427,12428,12429,12430,12431,
+12498,12499,12500,12501,12502,12503,
+12570,12571,12572,12573,12574,12575,
+12642,12643,12644,12645,12646,12647
+</data>
+ </layer>
+ <layer name="Tile Layer 4" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+5442,5443,5444,5445,5446,5447,
+5514,5515,5516,5517,5518,5519,
+5586,5587,5588,5589,5590,5591,
+5658,5659,5660,5661,5662,5663,
+5730,5731,5732,5733,5734,5735
+</data>
+ </layer>
+ <layer name="Tile Layer 5" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+7818,7819,7820,7821,7822,7823,
+7890,7891,7892,7893,7894,7895,
+7962,7963,7964,7965,7966,7967,
+8034,8035,8036,8037,8038,8039
+</data>
+ </layer>
+ <layer name="Tile Layer 6" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+10122,10123,10124,10125,10126,10127,
+10194,10195,10196,10197,10198,10199,
+10266,10267,10268,10269,10270,10271,
+10338,10339,10340,10341,10342,10343
+</data>
+ </layer>
+</map>

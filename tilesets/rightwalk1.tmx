@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="6" height="7" tilewidth="8" tileheight="8" nextobjectid="1">
+ <tileset firstgid="1" source="HEAD_plate_armor_helmet.tsx"/>
+ <tileset firstgid="2305" source="HEAD_plate_armor_helmet.tsx"/>
+ <tileset firstgid="4609" source="TORSO_plate_armor_arms_shoulders.tsx"/>
+ <tileset firstgid="6913" source="TORSO_plate_armor_torso.tsx"/>
+ <tileset firstgid="9217" source="LEGS_plate_armor_pants.tsx"/>
+ <tileset firstgid="11521" source="FEET_plate_armor_shoes.tsx"/>
+ <tileset firstgid="13825" source="playerAnimation.tsx"/>
+ <layer name="Tile Layer 4" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+6482,6483,6484,6485,6486,6487,
+6554,6555,6556,6557,6558,6559,
+6626,6627,6628,6629,6630,6631,
+6698,6699,6700,6701,6702,6703,
+6770,6771,6772,6773,6774,6775,
+6842,6843,6844,6845,6846,6847
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="6" height="7">
+  <data encoding="csv">
+1802,1803,1804,1805,1806,1807,
+1874,1875,1876,1877,1878,1879,
+1946,1947,1948,1949,1950,1951,
+2018,2019,2020,2021,2022,2023,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 3" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+8858,8859,8860,8861,8862,8863,
+8930,8931,8932,8933,8934,8935,
+9002,9003,9004,9005,9006,9007,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 4" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+11162,11163,11164,11165,11166,11167,
+11234,11235,11236,11237,11238,11239,
+11306,11307,11308,11309,11310,11311,
+11378,11379,11380,11381,11382,11383,
+11450,11451,11452,11453,11454,11455
+</data>
+ </layer>
+ <layer name="Tile Layer 5" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+13610,13611,13612,13613,13614,13615,
+13682,13683,13684,13685,13686,13687,
+13754,13755,13756,13757,13758,13759
+</data>
+ </layer>
+ <layer name="Tile Layer 6" width="6" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+15770,15771,15772,15773,15774,15775,
+15842,15843,15844,15845,15846,15847,
+15914,15915,15916,15917,15918,15919,
+15986,15987,15988,15989,15990,15991,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>
